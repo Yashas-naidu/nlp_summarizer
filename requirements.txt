@@ -1,4 +1,7 @@
+streamlit
 transformers
 nltk
 readtime
 textstat
+huggingface_hub
+python-dotenv

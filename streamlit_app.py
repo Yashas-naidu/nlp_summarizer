@@ -154,8 +154,8 @@ import readtime
 import textstat
 from io import StringIO
 
-st.set_page_config(page_title="SYNTHIA", 
-                   page_icon=":robot_face:",
+st.set_page_config(page_title="RESEARCH ET AL", 
+                   page_icon=":books:",
                    layout="wide",
                    initial_sidebar_state="expanded"
                    )
@@ -163,7 +163,7 @@ st.set_page_config(page_title="SYNTHIA",
 def p_title(title):
     st.markdown(f'<h3 style="text-align: left; color:#F63366; font-size:28px;">{title}</h3>', unsafe_allow_html=True)
 
-st.sidebar.header('SYNTHIA, I want to :crystal_ball:')
+st.sidebar.header('Try the magic :crystal_ball:')
 nav = st.sidebar.radio('',['Summarize text','Analyze text'])
 st.sidebar.write('')
 st.sidebar.write('')
@@ -172,7 +172,7 @@ st.sidebar.write('')
 st.sidebar.write('')
 
 if nav == 'Summarize text':    
-    st.markdown("<h4 style='text-align: center; color:grey;'>Accelerate knowledge with SYNTHIA &#129302;</h4>", unsafe_allow_html=True)
+    st.markdown("<h4 style='text-align: center; color:grey;'>Accelerate knowledge with et al bot... &#129302;</h4>", unsafe_allow_html=True)
     st.text('')
     p_title('Summarize')
     st.text('')
@@ -212,7 +212,7 @@ if nav == 'Summarize text':
                         model = BartForConditionalGeneration.from_pretrained("facebook/bart-large-cnn")
                         tokenizer = BartTokenizer.from_pretrained("facebook/bart-large-cnn")
                         inputs = tokenizer(string_data, max_length=1024, return_tensors="pt", truncation=True)
-                        summary_ids = model.generate(inputs['input_ids'], num_beams=4, length_penalty=2.0, max_length=150, min_length=40, early_stopping=True)
+                        summary_ids = model.generate(inputs['input_ids'], num_beams=4, length_penalty=2.0, max_length=1500, min_length=100, early_stopping=True)
                         bart_summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
                         st.markdown('___')
                         st.write('BART Model')
@@ -220,7 +220,7 @@ if nav == 'Summarize text':
                         st.balloons()
 
 if nav == 'Analyze text':
-    st.markdown("<h4 style='text-align: center; color:grey;'>Accelerate knowledge with SYNTHIA &#129302;</h4>", unsafe_allow_html=True)
+    st.markdown("<h4 style='text-align: center; color:grey;'>Accelerate knowledge with et al bot... &#129302;</h4>", unsafe_allow_html=True)
     st.text('')
     p_title('Analyze text')
     st.text('')
