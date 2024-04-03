@@ -5,8 +5,5 @@ readtime
 textstat
 huggingface_hub
 python-dotenv
-BartForConditionalGeneration
-BartTokenizer
-T5ForConditionalGeneration
-T5Tokenizer
 torch
+langchain
